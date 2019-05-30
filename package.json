@@ -3,14 +3,38 @@
   "version": "1.0.0",
   "description": "apple_project",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
+  "private": true,
+  "engines": {
+    "node": "^7.7.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "chmod +x run-debug && ./run-debug",
+    "test": "mocha",
+    "dev": "nodemon server/server.js"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_HEAPDUMP_OPTIONS": "nosignal"
+    }
+  },
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "moca": "^0.4.3",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.12.1"
   }
 }
