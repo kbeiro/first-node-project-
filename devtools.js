@@ -3,7 +3,7 @@ const app = express();
 var http = require('http');    
 var arquivo = require('fs');
 
-var server = http.createServer(function(request, response){      
+/* var server = http.createServer(function(request, response){      
     response.writeHead(200, {'Content-Type': 'text/html'});     
     arquivo.readFile('/Users/kbeiro/Desktop/sample_project/home.html', 
         function(error, html){             
@@ -25,6 +25,6 @@ var server = http.createServer(function(request, response){
         console.log("listening on localhost:3031");
     }
 
-})
+}) */
 
 
